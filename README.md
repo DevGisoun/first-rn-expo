@@ -55,17 +55,6 @@ Join our community of developers creating universal apps.
 
 # 호스트 PC - 컨테이너 간 가상 디바이스 연결
 
-## HOST_IP 환경변수 설정.
-
-```bash
-# 호스트 IP 환경 변수 설정
-apt update
-apt install iproute2 -y
-HOST_IP=$(ip route show default | awk '/default/ {print $3}')
-echo $HOST_IP
-export REACT_NATIVE_PACKAGER_HOSTNAME=$HOST_IP
-```
-
 ## 앱 디버깅
 
 1. AVD 실행.
